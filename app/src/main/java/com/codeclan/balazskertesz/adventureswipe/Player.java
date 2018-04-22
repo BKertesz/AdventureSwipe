@@ -54,4 +54,8 @@ public class Player implements IDamagable {
             return false;
         }
     }
+
+    public void attack(IDamagable target){
+        target.changeHealth(equipment.getImpact());
+    }
 }

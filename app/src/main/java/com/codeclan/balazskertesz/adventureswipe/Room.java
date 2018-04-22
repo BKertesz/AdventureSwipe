@@ -15,6 +15,12 @@ public class Room {
         checkTypeOfRoom();
     }
 
+    public Room(Player player){
+        this.player = player;
+        this.roomType = getRandomType();
+        checkTypeOfRoom();
+    }
+
     public static RoomType getRandomType(){
         Random random = new Random();
         int roomNumber = random.nextInt(RoomType.values().length);
