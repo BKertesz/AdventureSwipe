@@ -52,4 +52,8 @@ public class Creature implements IDamagable {
         int createNumber = random.nextInt(CreatureType.values().length);
         return randomCreatureType = CreatureType.values()[createNumber];
     }
+
+    public void attack(IDamagable target){
+        target.changeHealth(damage);
+    }
 }
